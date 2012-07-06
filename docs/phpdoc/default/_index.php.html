@@ -1,0 +1,515 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Docs for page index.php</title>
+	<link rel="stylesheet" type="text/css" id="layout" href="../media/layout.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../media/style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../media/print.css" media="print">
+</head>
+
+<body>
+<div id="header">
+	<div id="navLinks">
+        
+                                    
+                            	        [ <a href="../classtrees_default.html">Class Tree: default</a> ]
+            [ <a href="../elementindex_default.html">Index: default</a> ]
+        		[ <a href="../elementindex.html">All elements</a> ]		
+	</div>
+	<div id="packagePosition">
+		<div id="packageTitle2">default</div>
+		<div id="packageTitle">default</div>
+		<div id="elementPath"> &middot; </div>
+	</div>
+</div>
+
+<div id="nav" class="small">
+	<div id="packages">
+		Packages:
+					<p><a href="../li_default.html">default</a></p>
+			</div>
+
+				<div id="index">
+			<div id="files">
+								Files:<br>
+								<a href="../default/_default_vcs.php.html">		default_vcs.php
+		</a><br>
+			<a href="../default/_index.php.html">		index.php
+		</a><br>
+			<a href="../default/_revision_viewer.php.html">		revision_viewer.php
+		</a><br>
+			<a href="../default/_theme_revision.php.html">		theme_revision.php
+		</a><br>
+			<a href="../default/_vcs_interface.php.html">		vcs_interface.php
+		</a><br>
+				</div>
+			<div id="interfaces">
+				Interfaces:<br>
+								<a href="../default/Theme_Versioning_VCSAdapter.html">		Theme_Versioning_VCSAdapter
+		</a><br>
+				</div>
+			<div id="classes">
+				Classes:<br>
+								<a href="../default/Theme_Versioning_Default_VCSAdapter.html">		Theme_Versioning_Default_VCSAdapter
+		</a><br>
+			<a href="../default/Theme_Versioning_Revision.html">		Theme_Versioning_Revision
+		</a><br>
+				</div>
+		</div>
+	</div>
+
+<div id="body">
+	    		<h1>Procedural File: index.php</h1>
+	<p style="margin: 0px;">Source Location: /index.php</p>
+	
+<br>
+<br>
+
+<div class="contents">
+<h2>Classes:</h2>
+<dl>
+</dl>
+</div>
+
+<h2>Page Details:</h2>
+<hr>
+Includes:<br>
+include_once(<a href="../default/_default_vcs.php.html">'default_vcs.php'</a>) <span class="linenumber">[line 12]</span>
+<br />
+include_once(<a href="../default/_theme_revision.php.html">'theme_revision.php'</a>) <span class="linenumber">[line 13]</span>
+<br />
+<hr>
+<div id="global">
+</div><hr>
+<div id="define">
+</div><hr>
+<div id="function">
+	<a name="functiontheme_versioning_adapter_settings_section_text"></a>
+	<h3>theme_versioning_adapter_settings_section_text</h3>
+	<div class="indent">
+		<code>void theme_versioning_adapter_settings_section_text(
+)</code>
+		<p class="linenumber">[line 320]</p>
+		<p align="center"><strong>Callback function used to create the &quot;adapter settings&quot; section text
+</strong></p>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_add_revision_viewer_html"></a>
+	<h3>theme_versioning_add_revision_viewer_html</h3>
+	<div class="indent">
+		<code>void theme_versioning_add_revision_viewer_html(
+)</code>
+		<p class="linenumber">[line 416]</p>
+		<p align="center"><strong>Includes the revision viewer on the theme-editor.php page
+</strong></p>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_add_settings_page"></a>
+	<h3>theme_versioning_add_settings_page</h3>
+	<div class="indent">
+		<code>void theme_versioning_add_settings_page(
+)</code>
+		<p class="linenumber">[line 286]</p>
+		<p align="center"><strong>Action hook callback function to add the settings page to the admin dashboard settings menu
+</strong></p>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_add_ui"></a>
+	<h3>theme_versioning_add_ui</h3>
+	<div class="indent">
+		<code>void theme_versioning_add_ui(
+)</code>
+		<p class="linenumber">[line 143]</p>
+		<p align="center"><strong>Adds the theme versioning UI if and only if we are viewing/editing the current theme in theme-editor.php
+</strong></p>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_ajax_commit"></a>
+	<h3>theme_versioning_ajax_commit</h3>
+	<div class="indent">
+		<code>void theme_versioning_ajax_commit(
+)</code>
+		<p class="linenumber">[line 554]</p>
+		<p align="center"><strong>AJAX-Triggered action to revert all files to a given revision using the VCSAdapter's revert_to( $revision_id ) method.
+</strong></p>
+<p>On Success, When committing all files: Echoes &quot;Successfully committed all files.&quot;  On Failure, When committing all files: Echoes &quot;Could not commit files.&quot; and an error code.</p><p>On Success, When committing one file: Echoes &quot;Successfully committed &lt;file's basename&gt;&quot;  On Failure, When committing one file: Echoes &quot;Could not commit &lt;file's basename&gt;.&quot; and an error code.</p><p>To commit commit all files, set the following AJAX POST parameter:  commit_all : if set to 'true', the function will commit all of the theme files by calling the VCSAdapter's commit_all method.</p><p>To commit one particular file, set the following AJAX POST parameters:  file_name : the file name of the file to be committed, if this is not set, the function will commit the current theme-editor file</p>		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_ajax_get_revision_file_contents"></a>
+	<h3>theme_versioning_ajax_get_revision_file_contents</h3>
+	<div class="indent">
+		<code>void theme_versioning_ajax_get_revision_file_contents(
+)</code>
+		<p class="linenumber">[line 517]</p>
+		<p align="center"><strong>AJAX-Triggered action to revert all files to a given revision using the VCSAdapter's revert_to( $revision_id ) method.
+</strong></p>
+<p>Echoes the text-area-safe string containing the requested file's contents.  AJAX POST parameters this function requires:  revision_id : the revision id  file_name : the name of the file</p>		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_ajax_get_revision_file_names"></a>
+	<h3>theme_versioning_ajax_get_revision_file_names</h3>
+	<div class="indent">
+		<code>void theme_versioning_ajax_get_revision_file_names(
+)</code>
+		<p class="linenumber">[line 492]</p>
+		<p align="center"><strong>AJAX-Triggered action to revert all files to a given revision using the VCSAdapter's revert_to( $revision_id ) method.
+</strong></p>
+<p>Echoes the json encoded string containing revision's file names.  AJAX POST parameters this function requires:  revision_id : the id of the revision whose file names are desired.</p>		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_ajax_load_revisions"></a>
+	<h3>theme_versioning_ajax_load_revisions</h3>
+	<div class="indent">
+		<code>void theme_versioning_ajax_load_revisions(
+)</code>
+		<p class="linenumber">[line 595]</p>
+		<p align="center"><strong>AJAX-Triggered action to retrieve additional revisions' information to be presented through the revision viewer.
+</strong></p>
+<p>Echoes the text-area-safe string containing the requested file's contents.</p><p>AJAX POST parameters this function requires if specifying start revision id:  start_rev_id : the revision id of the last loaded revision currently available in the viewer.  num_revisions : the number of revisions to load in this request</p><p>AJAX POST parameter this function requires when requesting only the latest revision:  latest_revision_only: if set to 'true', only returns the latest revision. No other parameters need be set aside from security.</p>		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_ajax_revert_file_to"></a>
+	<h3>theme_versioning_ajax_revert_file_to</h3>
+	<div class="indent">
+		<code>void theme_versioning_ajax_revert_file_to(
+)</code>
+		<p class="linenumber">[line 441]</p>
+		<p align="center"><strong>AJAX-Triggered action to revert a particular file using the VCSAdapter's revert_file_to( $revision_id, $file_name ) method.
+</strong></p>
+<p>On Success: Echoes &quot;Successfully reverted &lt;basename of file&gt; to revision &lt;revision_id&gt;&quot;.  On Failure: Echoes &quot;Failed to revert &lt;basename of file&gt; to revison &lt;revision_id&gt;&quot;  AJAX POST parameters this function requires:  revision_id : the revision the file should be reverted to.  file_name :  the file name of the file to be reverted.</p>		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_ajax_revert_to"></a>
+	<h3>theme_versioning_ajax_revert_to</h3>
+	<div class="indent">
+		<code>void theme_versioning_ajax_revert_to(
+)</code>
+		<p class="linenumber">[line 467]</p>
+		<p align="center"><strong>AJAX-Triggered action to revert all files to a given revision using the VCSAdapter's revert_to( $revision_id ) method.
+</strong></p>
+<p>On Success: Echoes &quot;Successfully reverted all files to revision &lt;revision_id&gt;&quot;.  On Failure: Echoes &quot;Failed to revert to revision &lt;revision_id&gt;&quot;  AJAX POST parameters this function requires:  revision_id : the revision the file should be reverted to.</p>		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_commit_trigger"></a>
+	<h3>theme_versioning_commit_trigger</h3>
+	<div class="indent">
+		<code>void theme_versioning_commit_trigger(
+)</code>
+		<p class="linenumber">[line 399]</p>
+		<p align="center"><strong>This function triggers the commits in the Basic UI
+</strong></p>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_get_current_editor_file"></a>
+	<h3>theme_versioning_get_current_editor_file</h3>
+	<div class="indent">
+		<code>mixed theme_versioning_get_current_editor_file(
+)</code>
+		<p class="linenumber">[line 87]</p>
+		<p align="center"><strong>Get the current file being viewed/edited if on theme-editor.php.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - The string full file name/path of the current file being viewed/edited if on theme-editor.php. false otherwise</li>
+</ul>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_get_theme_file_paths"></a>
+	<h3>theme_versioning_get_theme_file_paths</h3>
+	<div class="indent">
+		<code>array theme_versioning_get_theme_file_paths(
+)</code>
+		<p class="linenumber">[line 67]</p>
+		<p align="center"><strong>Get the paths to all the theme files editable via theme-editor.php.
+</strong></p>
+<p>Provided for use in the VCSAdapter's commitAll() function</p><h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - an array containing the paths to the current theme's files (both stylesheet and template files).</li>
+</ul>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_get_ui_mode"></a>
+	<h3>theme_versioning_get_ui_mode</h3>
+	<div class="indent">
+		<code>String theme_versioning_get_ui_mode(
+)</code>
+		<p class="linenumber">[line 19]</p>
+		<p align="center"><strong>Get the UI mode. Determines if the UI is in basic or advanced mode.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - 'basic' if the UI is currently set to basic mode, 'advanced' if set to advanced mode.</li>
+</ul>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_get_vcs"></a>
+	<h3>theme_versioning_get_vcs</h3>
+	<div class="indent">
+		<code><a href="../default/Theme_Versioning_VCSAdapter.html">Theme_Versioning_VCSAdapter</a> theme_versioning_get_vcs(
+)</code>
+		<p class="linenumber">[line 28]</p>
+		<p align="center"><strong>Get the current VCSAdapter.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - on success, false if no adapter is set</li>
+</ul>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_get_vcs_include_path"></a>
+	<h3>theme_versioning_get_vcs_include_path</h3>
+	<div class="indent">
+		<code>string theme_versioning_get_vcs_include_path(
+ $vcs_adapter)</code>
+		<p class="linenumber">[line 46]</p>
+		<p align="center"><strong>Get the path to the file where the current vcs is declared so that it can be included in other script files programmatically.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - the path to the file where the current vcs is declared.</li>
+</ul>
+		
+		<h4>Parameters</h4>
+		<ul>
+					<li>
+			<span class="type"></span>
+			<b>$vcs_adapter</b> 
+			- 
+			</li>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_interface_settings_section_text"></a>
+	<h3>theme_versioning_interface_settings_section_text</h3>
+	<div class="indent">
+		<code>void theme_versioning_interface_settings_section_text(
+)</code>
+		<p class="linenumber">[line 361]</p>
+		<p align="center"><strong>Callback function to output the Interface Settings Text and Field
+</strong></p>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_is_editing_current_theme"></a>
+	<h3>theme_versioning_is_editing_current_theme</h3>
+	<div class="indent">
+		<code>boolean theme_versioning_is_editing_current_theme(
+)</code>
+		<p class="linenumber">[line 133]</p>
+		<p align="center"><strong>Check to see if the theme editor page is on the current theme.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - true if currently on the theme editor page and viewing the current theme. flase otherwise.</li>
+</ul>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_make_adapter_settings_field"></a>
+	<h3>theme_versioning_make_adapter_settings_field</h3>
+	<div class="indent">
+		<code>void theme_versioning_make_adapter_settings_field(
+)</code>
+		<p class="linenumber">[line 338]</p>
+		<p align="center"><strong>Callback function used to create the fields in the adapter settings section.
+</strong></p>
+<p>This function outputs the select input used to choose an adapter</p>		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_make_settings_page"></a>
+	<h3>theme_versioning_make_settings_page</h3>
+	<div class="indent">
+		<code>void theme_versioning_make_settings_page(
+)</code>
+		<p class="linenumber">[line 299]</p>
+		<p align="center"><strong>Callback function used to create the Theme Versioning Settings Page
+</strong></p>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_make_ui_mode_settings_field"></a>
+	<h3>theme_versioning_make_ui_mode_settings_field</h3>
+	<div class="indent">
+		<code>void theme_versioning_make_ui_mode_settings_field(
+)</code>
+		<p class="linenumber">[line 379]</p>
+		<p align="center"><strong>Callback function used to create the UI Mode Settings text and field.
+</strong></p>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_print_styles"></a>
+	<h3>theme_versioning_print_styles</h3>
+	<div class="indent">
+		<code>void theme_versioning_print_styles(
+)</code>
+		<p class="linenumber">[line 171]</p>
+		<p align="center"><strong>Include the style sheets for the revision viewer on the theme-editor.php page.
+</strong></p>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_register_adapter"></a>
+	<h3>theme_versioning_register_adapter</h3>
+	<div class="indent">
+		<code>void theme_versioning_register_adapter(
+<a href="../default/Theme_Versioning_VCSAdapter.html">Theme_Versioning_VCSAdapter</a> $vcs_adapter)</code>
+		<p class="linenumber">[line 207]</p>
+		<p align="center"><strong>The VCSAdapter plugins will have to register themeselves by calling this function.
+</strong></p>
+		
+		<h4>Parameters</h4>
+		<ul>
+					<li>
+			<span class="type"><a href="../default/Theme_Versioning_VCSAdapter.html">Theme_Versioning_VCSAdapter</a></span>
+			<b>$vcs_adapter</b> 
+			- 
+			</li>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_register_default_vcs"></a>
+	<h3>theme_versioning_register_default_vcs</h3>
+	<div class="indent">
+		<code>void theme_versioning_register_default_vcs(
+)</code>
+		<p class="linenumber">[line 190]</p>
+		<p align="center"><strong>Register the Default VCS
+</strong></p>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_settings_init"></a>
+	<h3>theme_versioning_settings_init</h3>
+	<div class="indent">
+		<code>void theme_versioning_settings_init(
+)</code>
+		<p class="linenumber">[line 238]</p>
+		<p align="center"><strong>Setup the settings for the plugin.
+</strong></p>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_set_vcs"></a>
+	<h3>theme_versioning_set_vcs</h3>
+	<div class="indent">
+		<code>bool theme_versioning_set_vcs(
+<a href="../default/Theme_Versioning_VCSAdapter.html">Theme_Versioning_VCSAdapter</a> $vcs_adapter)</code>
+		<p class="linenumber">[line 58]</p>
+		<p align="center"><strong>Set the vcs_adapter to be used by the Theme Versioning plugin.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - true on success, false on failure</li>
+</ul>
+		
+		<h4>Parameters</h4>
+		<ul>
+					<li>
+			<span class="type"><a href="../default/Theme_Versioning_VCSAdapter.html">Theme_Versioning_VCSAdapter</a></span>
+			<b>$vcs_adapter</b> 
+			- 
+			the adapter to be used by the plugin.</li>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="functiontheme_versioning_uninstall"></a>
+	<h3>theme_versioning_uninstall</h3>
+	<div class="indent">
+		<code>void theme_versioning_uninstall(
+)</code>
+		<p class="linenumber">[line 671]</p>
+		<p align="center"><strong>Uninstall Hook Callback. Deletes options in database.
+</strong></p>
+		
+		<h4>Parameters</h4>
+		<ul>
+				</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+</div>
+	<div id="credit">
+		<hr>
+		Documentation generated on Fri, 19 Aug 2011 18:08:44 -0600 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<html>
+<head>
+	<title>WordPress Theme Versioning Plugin Documentation</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<h1 id="logo"><img src="wp_theme_versioning.png" title="WordPress Theme Versioning Logo" /></h1>
+	<p>This guide is meant to show new users how to use the theme versioning plugin, and to answer any questions users might have. For developers, there is a section dedicated to developers who wish to write adapter plugins so that they can utilize the VCS of their choice with the UI that the Theme Versioning plugin provides.</p>
+	<h3>Table of Contents</h3>
+		<ul>
+			<li><a href="#installation" title="Installation">Installation</a></li>
+			<li>
+				<a href="#settings" title="Settings">Settings</a>
+				<ul>
+					<li><a href="#selectadaptersetting">Selecting a VCS Adapter (advanced)</a></li>
+					<li><a href="#choosinginterfacemode">Choosing Between Basic and Advanced Mode</a></li>
+				</ul>
+			</li>
+			<li><a href="#howtouse" title="">How to Use Theme Versioning</a>
+				<ul>
+					<li><a href="#basic" title="Basic Mode">Basic Mode</a></li>
+					<li><a href="#advanced" title="Advanced Mode">Advanced Mode</a></li>
+				</ul>
+			</li>
+			<li><a href="#revisionviewer" title="Revision Viewer">Using The Revision Viewer</a></li>
+			<li>
+				<a href="#writeanadapter" title="Writing a VCS Adapter Plugin">Writing an Adapter Plugin</a>
+				<ul>
+					<li><a href="#whywrite">Why?</a></li>
+					<li><a href="#howtowrite">How?</a></li>
+				</ul>
+			</li>
+			<li><a href="#faq" title="Frequently Asked Questions">Frequently Asked Questions</a></li>
+		</ul>
+	<h2 id="installation">Installation</h2>
+	
+	<p>Installation of the plugin is the same as for any other plugin. Download the plugin from the WordPress.org repository and install the plugin as usual. Alternatively, download the source and upload the template_versioning folder to your plugins directory and activate the plugin on your plugins page.
+	</p>
+	
+	<p>At this point, your plugin will work using the built-in version control system. However, if you are a more advanced user, and would like to use 
+	an external version control system, install the VCS Adapter plugin of your choice and activate it. Next go to the Theme Versioning Settings page
+	and select the adapter from the drop-down menu labeled "Select a VCS" under the Adapter Settings section.
+	Click save, and the plugin will now use the VCS you selected- it's as easy as that!  
+	</p>
+	<h2 id="settings">Settings</h2>
+	<p>Warning: if you are not an advanced WordPress user, or don't know what a version control system is, then you probably should leave the settings as they are.</p>
+	<h3 id="selectadaptersetting">Selecting a VCS Adapter</h3>
+		<p>The settings page allows you to choose among the installed VCS adapters or the default VCS. 
+		Simply choose your desired VCS from the drop-down menu labeled "Select a VCS" under the Adapter Settings section.
+		</p>
+	<h3 ="choosinginterfacemode">Choosing Between Basic and Advanced Mode</h3>
+	<p>To change between the basic mode and the advanced mode simply select your desired option from the group of buttons labeled "Choose an interface" under the Interface Settings section.</p>
+	<p>The basic interface is recommended for people who are inexperienced or forgetful users. It automatically keeps track of (commits) all changes made each time you save a file. If you have never used an actual version control system and are unfamiliar with the terms "commit" or "changeset" then this is probably the option you want to use.
+	</p>
+	<p>The advanced interface allows the user to choose when to commit changes instead of automatically committing every time a file is saved. It allows you to commit changes to all files or just a single file. The one downside of using the advanced interface is that you will have to remember to actually click the commit button located below your theme editor text area.
+	</p>
+	</p>
+	<h2 id="howtouse">How To Use The Plugin</h2>
+	<p>There is a slight difference in how you use the plugin based on whether you choose basic or advanced mode.</p>
+	<h3 id="basic">Basic Mode</h3>
+	<p>In basic mode, the plugin automatically creates a revision every time you save one of your current theme files. Just edit your theme files as you always have before, and if you ever need to
+	roll back to an earlier version, simply click the "Open Revision Viewer" button and revert your theme back to one of its previous states. For more in-depth instructions on how to use the revision viewer to revert to a previous revision see <a href="#revisionviewer">Using The Revision Viewer</a>.
+	</p>
+	<h3 id="advanced">Advanced Mode</h3>
+	<p>In the advanced mode, you commit revisions by clicking one of the two commit buttons below the theme editor text area. 
+	There are two different buttons: the "Commit Current File" button and the "Commit All Files" button.
+	</p>
+	<p>The "Commit All Files" button does just that- it commits all of the theme files including the one you are currently editing. Any unsaved changes are not committed. </p>
+	<p>The "Commit Current File" button commits the current file that you are editing in the theme editor. Just as with the "Commit All Files" button, any unsaved changes are not committed.</p>
+	<p>It is very important to remember that any unsaved changes are not committed. You must save any changes that you wish to be committed before committing.</p>
+	<h2 id="revisionviewer">Using The Revision Viewer</h2>
+	<p>The upper section of the revision viewer entitled "Choose a Revision" allows you to choose which revision you wish to view. Select a revision and click the "View Revision" button
+	to view the files in that revision. If you'd like, you can minimize the "Choose a Revision" section by clicking on the "+" in the upper right hand corner of the box.
+	</p>
+	<p>The lower section of the revision viewer allows you to view the files in the revision that you have selected. 
+	The selected revision's id is indicated in bold text Where it says "Currently Viewing Revision ___". 
+	You can browse through the files in the current revision by using the drop-down menu labeled "File".
+	</p>
+	<p>In the revision viewer, there are two ways you can roll back changes to your theme files. By clicking the "Revert Current File" button, you can revert only the currently viewed file, which will restore your that file to its state in the currently selected revision, but will leave all other files untouched. Alternatively, you can click the "Revert All Files" button, which,as its name implies, will revert all your files to the currently selected revision.
+	</p>
+	<p>Note: Just highlighting a revision in the upper section of the revision does not select it, to select a revision you must click the "View Revision" button.</p>
+	<h2 id="writeanadapter">Writing a VCS Adapter Plugin</h2>
+	<h3 id="whywrite">Why?</h3>
+	<p>Why write an adapter plugin? If you wish to use a version control system that does not already have an adapter written, then you're out of luck... 
+	Unless you write an adapter for the VCS! After writing an adapter, you're able to use the VCS with the Theme Versioning plugin's UI.</p>
+	<h3 id="howtowrite">How?</h3>
+	<p>It's actually quite simple. Implement the Theme_Versioning_VCSAdapter interface as they are described in the phpdocs and fill in all the methods to access your VCS.
+	 Next, in an activation hook, register your plugin using the theme_versioning_register_adapter function- just pass it an instance of your VCSAdapter object.</p>
+	<h2 id="faq">Frequently Asked Questions</h2>
+	<ol>
+		<li><strong>I accidentally deleted my theme! What should I do?</strong>
+		<br>Relax- the Theme Versioning plugin can help you. First, select a different theme. Next go to the theme editor and open up the revision viewer. Click the "Revert All Files" button. The Theme Versioning plugin will automatically create the directory and restore your theme files. Now go back to the Themes page and select your old theme.</li>
+		<li><strong>Do I need to have a version control system like Subversion or Git on my server?</strong>
+		<br>No, the Theme Versioning plugin comes ready to go as soon as you activate it. 
+		By default, the plugin will store revisions in the WordPress database. 
+		If you have access to an external version control system and there is an adapter plugin available for that VCS, then by all means feel free to install the adapter plugin and use it. 
+		However, if you don't want to mess with anything else, just go ahead and use the built-in database backed revision system- it takes no additional setup!</li>
+		<li><strong>Can I switch between Version Control Systems?</strong>
+		<br>Sure, however only those revisions that were committed to that particular version control system will be visible in the revision viewer. For that reason it is generally recommended that you stick to one VCS.</li>
+	</ol>
+	<p class="credits"><small>Project sponsored by <a href="http://code.google.com/soc/" title="Google Summer of Code">Google</a>, developed by <a href="http://davidjulia.wordpress.com/about/" title="David Julia">David Julia</a> and mentored by <a href="http://profiles.wordpress.org/users/ocean90" title="ocean90">Ocean90</a> with an assist by <a href="http://andrewnacin.com/about/" title="Andrew Nacin">Andrew Nacin</a> and <a href="http://darylkoop.com/about/">Daryl Koopersmith</a>. The layout and style for this document was adapted from <a href="http://twitter.com/_mert" title="Mert Yazicioglu">Mert Yazicioglu's</a> documentation for WP Move</small></p>
+</body>
+</html>
